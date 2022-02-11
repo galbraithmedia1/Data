@@ -2,51 +2,63 @@
 <html>
   <head>
     <title>Back End Assessment</title>
-    <link href="./styles.css" rel="stylesheet"/>
+    <link href="./styles.css" rel="stylesheet" />
   </head>
   <body class="container">
-    <button id="complimentButton">Get a compliment</button>
-    <button id="fortuneButton">Get a fortune</button>
 
-    <div class="bored-api">
+    <div class="page-wrapper">
 
-      <h1>Are you bored?</h1>
-      <p>Click the button to have a random idea to fill your boring life</p>
-      <button id="boredButton">I'm bored?</button>
-      <p class="bored"></p>
+      <div class="box-container">
+        
 
+        <div class="top-btns">
 
+          <button id="complimentButton">Get a compliment</button>
+        <button id="fortuneButton">Get a fortune</button>
+        </div>
+        
+        <div>
 
-    </div>
-
-    <div class="space-api">
-      <!-- displays the pic of the day -->
-      <div class="space-container">
-        <!-- <img src="https://apod.nasa.gov/apod/image/2202/IC342Feller1024.jpg" id="space" class="spaceimg" /> -->
-
-
+          
+        </div>
+        <div class="bored-api">
+          <div class="bor"><h1>Are you bored?</h1>
+            <p>Click the button to have a random idea to fill your boring life</p></div>
+          
+          <button id="boredButton">I'm bored?</button>
+          <div class="pp"><p class="bored"></p></div>
+          
+        </div>
+    
+        <div class="space-api">
+          <!-- displays the pic of the day -->
+          <div class="space-container">
+            <!-- <img src="https://apod.nasa.gov/apod/image/2202/IC342Feller1024.jpg" id="space" class="spaceimg" /> -->
+          </div>
+        </div>
+    
+        <form>
+          <input
+            type="text"
+            id="name"
+            placeholder="What's the name of the galaxy?"
+          />
+          <input
+            type="text"
+            id="distance"
+            placeholder="What is the distance of the galaxy?"
+          />
+          <input type="text" id="img" placeholder="Paste an image URL" />
+          <button>add galaxy</button>
+        </form>
+        <section id="galaxy-container"></section>
 
       </div>
 
+     
 
     </div>
-
-    <form>
-      <input 
-          type='text'
-          id="name"
-          placeholder="What's the name of the galaxy?"/>
-      <input 
-          type='text'
-          id="distance"
-          placeholder='What is the distance of the galaxy?'/>
-      <input 
-          type='text'
-          id="img"
-          placeholder='Paste an image URL'/>
-      <button>add galaxy</button>
-  </form>
-  <section id="galaxy-container"></section>
+    
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>
   </body>

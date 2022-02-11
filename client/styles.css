@@ -1,4 +1,176 @@
-.spaceimg {
+body {
+  /* ff 3.6+ */
+  background: -moz-linear-gradient(
+    181deg,
+    rgba(125, 63, 125, 1) 0%,
+    rgba(27, 27, 108, 1) 100%
+  );
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-linear-gradient(
+    181deg,
+    rgba(125, 63, 125, 1) 0%,
+    rgba(27, 27, 108, 1) 100%
+  );
+
+  /* opera 11.10+ */
+  background: -o-linear-gradient(
+    181deg,
+    rgba(125, 63, 125, 1) 0%,
+    rgba(27, 27, 108, 1) 100%
+  );
+
+  /* ie 6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1B1B6C', endColorstr='#7D3F7D', GradientType=1 );
+
+  /* ie 10+ */
+  background: -ms-linear-gradient(
+    181deg,
+    rgba(125, 63, 125, 1) 0%,
+    rgba(27, 27, 108, 1) 100%
+  );
+
+  /* global 94%+ browsers support */
+  background: linear-gradient(
+    181deg,
+    rgba(125, 63, 125, 1) 0%,
+    rgba(27, 27, 108, 1) 100%
+  );
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 100vh;
+  display: flex;
+}
+
+.page-wrapper {
+  display: flex;
+  width: 70%;
+  height: 80%;
+
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.box-container {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* ff 3.6+ */
+  background: -moz-linear-gradient(
+    1deg,
+    rgba(172, 88, 172, 1) 0%,
+    rgba(50, 50, 195, 1) 100%
+  );
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-linear-gradient(
+    1deg,
+    rgba(172, 88, 172, 1) 0%,
+    rgba(50, 50, 195, 1) 100%
+  );
+
+  /* opera 11.10+ */
+  background: -o-linear-gradient(
+    1deg,
+    rgba(172, 88, 172, 1) 0%,
+    rgba(50, 50, 195, 1) 100%
+  );
+
+  /* ie 6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#AC58AC', endColorstr='#3232C3', GradientType=1 );
+
+  /* ie 10+ */
+  background: -ms-linear-gradient(
+    1deg,
+    rgba(172, 88, 172, 1) 0%,
+    rgba(50, 50, 195, 1) 100%
+  );
+
+  /* global 94%+ browsers support */
+  background: linear-gradient(
+    1deg,
+    rgba(172, 88, 172, 1) 0%,
+    rgba(50, 50, 195, 1) 100%
+  );
+
+  border-radius: 50px;
+}
+
+.top-btns {
+  background-color: rgba(114, 23, 106, 0.548);
+  width: 50%;
+  height: 20%;
+  border-radius: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-btns button {
+  border-radius: 10px;
+  padding: 20px 50px;
+  margin: 50px;
+  height: 30px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background: rgba(47, 50, 209, 0.808);
+  color: white;
+  border: 1px solid white;
+}
+
+.bored-api {
+  margin-top: 50px;
+  background-color: rgba(81, 23, 114, 0.548);
+  width: 50%;
+  height: 20%;
+  border-radius: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  display: flex;
+}
+
+.bored-api h1 {
+  padding-left: 50px;
+}
+.bored-api button {
+  border-radius: 10px;
+  padding: 20px 50px;
+  margin: 50px;
+  height: 30px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background: rgba(47, 50, 209, 0.808);
+  color: white;
+  border: 1px solid white;
+}
+.bor {
+  padding-left: 20px;
+}
+.bored {
+  width: 50%;
+}
+
+.pp {
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.a .spaceimg {
   width: 200px;
   height: 200px;
   background-image: cover;
