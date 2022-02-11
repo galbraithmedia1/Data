@@ -56,3 +56,70 @@ const nasaImg = () => {
 nasaImg();
 
 
+
+
+
+//songs
+
+
+const galaxysContainer = document.querySelector('#galaxy-container')
+const form = document.querySelector('form')
+
+const baseURL = `http://localhost:4000/api/galaxys`
+
+const galaxysCallback = ({ data: galaxys }) => displayGalaxys(galaxys)
+const errCallback = err => console.log(err)
+
+const getAllGalaxys = () => axios.get(baseURL).then(galaxysCallback).catch(errCallback)
+const createGalaxy = body => axios.post(baseURL, body).then(galaxysCallback).catch(errCallback)
+const deleteGalaxys = id => axios.delete(`${baseURL}/${id}`).then(galaxysCallback).catch(errCallback)
+const updateGalaxys = (id, type) => axios.put(`${baseURL}/${id}`, {type}).then(galaxysCallback).catch(errCallback)
+
+function submitHandler(e) {
+    e.preventDefault()
+
+    let names = document.querySelector('#name')
+    let distance = document.querySelector('#distance')
+    let imageURL = document.querySelector('#img')
+
+    let bodyObj = {
+        names: names.value,
+        distance: distance.value, 
+        imageURL: imageURL.value
+    }
+
+    createGalaxy(bodyObj)
+
+    names.value = ''
+    distance.value = ''
+    imageURL.value = ''
+}
+
+function createGalaxyCard(galaxy) {
+    const galaxyCard = document.createElement('div')
+    galaxyCard.classList.add('galaxy-card')
+
+    galaxyCard.innerHTML = `<img alt='galaxy cover image' src=${galaxy.imageURL} class="galaxy-cover-image"/>
+    <p class="address">${galaxy.address}</p>
+    <div class="btns-container">
+        <button onclick="updateGalaxys(${galaxy.id}, 'minus')">-</button>
+        <p class="galaxy-price">$${galaxy.distance}</p>
+        <button onclick="updateGalaxys(${galaxy.id}, 'plus')">+</button>
+    </div>
+    <button onclick="deleteGalaxys(${galaxy.id})">delete</button>
+    `
+
+
+   galaxysContainer.appendChild(galaxyCard)
+}
+
+function displayGalaxys(arr) {
+    galaxysContainer.innerHTML = ``
+    for (let i = 0; i < arr.length; i++) {
+        createGalaxyCard(arr[i]) 
+    }
+}
+
+form.addEventListener('submit', submitHandler)
+
+getAllGalaxys()

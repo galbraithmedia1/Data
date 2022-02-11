@@ -1,0 +1,20 @@
+[
+    {
+      "id": 1,
+      "names": "MILKY WAY GALAXY",
+      "distance": 290000,
+      "imageURL" : "https://cdn.pixabay.com/photo/2018/08/15/13/10/galaxy-3608029__340.jpg"
+    },
+    {
+      "id": 2,
+      "names": "SIRIUS GALAXY",
+      "distance": 454615,
+      "imageURL" : "https://media.istockphoto.com/photos/planet-earth-viewed-from-space-with-city-lights-in-europe-world-with-picture-id1284041267?b=1&k=20&m=1284041267&s=170667a&w=0&h=6ZEQOWlyaCVhQKkAjqd0WGa5Zzw-WsHQj0P2j9NbnTU="
+    },
+    {
+      "id": 3,
+      "names": "ORION",
+      "distance": 169000,
+      "imageURL" : "https://cdn.mos.cms.futurecdn.net/pAWXMnvfQPyfdthf6ZeUaM.jpg"
+    }
+  ]
